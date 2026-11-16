@@ -1,0 +1,7 @@
+{
+  "linter": "biome",
+  "editors": ["universal"],
+  "agents": ["universal"],
+  "frameworks": [],
+  "integrations": []
+}

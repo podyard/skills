@@ -2,22 +2,33 @@
   "name": "@podyard/skills",
   "version": "0.1.0",
   "description": "Podyard agent skill — expert assistance for podyard installation, setup, architecture, and customization",
-  "type": "module",
-  "files": [
-    "skill",
-    "README.md"
-  ],
-  "scripts": {
-    "publish": "npm publish --access public"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "keywords": [
     "podyard",
     "skill",
     "agent",
     "ai"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "type": "module",
+  "files": [
+    "skills",
+    "README.md",
+    "LICENSE.md",
+    "banner.jpg"
+  ],
+  "scripts": {
+    "check": "ultracite check",
+    "check:pack": "node scripts/validate.mjs --pack",
+    "check:skill": "node scripts/validate.mjs",
+    "fix": "ultracite fix",
+    "prepublishOnly": "node scripts/validate.mjs --pack",
+    "publish": "npm publish --access public"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.8",
+    "ultracite": "8.2.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

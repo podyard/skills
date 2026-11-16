@@ -1,0 +1,12 @@
+# Publish only what's needed to run the skill.
+# Note: `files` in package.json takes precedence over .npmignore,
+# but this keeps `npm pack` output explicit and auditable.
+
+*
+
+!skills/
+!skills/**
+!README.md
+!LICENSE.md
+!package.json
+!banner.jpg
